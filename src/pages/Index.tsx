@@ -9,6 +9,7 @@ import Testimonials from "@/components/Testimonials";
 import BookingWidget from "@/components/BookingWidget";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Chatbot from "@/components/Chatbot";
 
 const allProperties: Property[] = [
   {
@@ -77,6 +78,72 @@ const allProperties: Property[] = [
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
     type: "Villa",
   },
+  {
+    id: "7",
+    title: "Burj Khalifa View Apartment",
+    price: "3,800,000 AED",
+    location: "Downtown Dubai",
+    bedrooms: 3,
+    bathrooms: 3,
+    sqft: 2100,
+    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
+    type: "Apartment",
+  },
+  {
+    id: "8",
+    title: "Emirates Hills Mansion",
+    price: "15,000,000 AED",
+    location: "Emirates Hills",
+    bedrooms: 6,
+    bathrooms: 7,
+    sqft: 8500,
+    image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&h=600&fit=crop",
+    type: "Villa",
+  },
+  {
+    id: "9",
+    title: "Dubai Creek Harbour Penthouse",
+    price: "6,900,000 AED",
+    location: "Dubai Creek Harbour",
+    bedrooms: 4,
+    bathrooms: 5,
+    sqft: 4800,
+    image: "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=800&h=600&fit=crop",
+    type: "Penthouse",
+  },
+  {
+    id: "10",
+    title: "Jumeirah Golf Estates Villa",
+    price: "7,500,000 AED",
+    location: "Jumeirah Golf Estates",
+    bedrooms: 5,
+    bathrooms: 6,
+    sqft: 6200,
+    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
+    type: "Villa",
+  },
+  {
+    id: "11",
+    title: "City Walk Townhouse",
+    price: "4,200,000 AED",
+    location: "City Walk",
+    bedrooms: 4,
+    bathrooms: 4,
+    sqft: 3500,
+    image: "https://images.unsplash.com/photo-1605146769289-440113cc3d00?w=800&h=600&fit=crop",
+    type: "Townhouse",
+  },
+  {
+    id: "12",
+    title: "Marina Promenade Apartment",
+    price: "2,200,000 AED",
+    location: "Dubai Marina",
+    bedrooms: 2,
+    bathrooms: 2,
+    sqft: 1400,
+    image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop",
+    type: "Apartment",
+  },
 ];
 
 const Index = () => {
@@ -120,6 +187,7 @@ const Index = () => {
         <Contact />
       </main>
       <Footer />
+      <Chatbot />
     </div>
   );
 };

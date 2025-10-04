@@ -17,6 +17,11 @@ const Header = () => {
     { name: "Contact", path: "/#contact" },
   ];
 
+  const handleLogoClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.location.href = '/';
+  };
+
   const NavLinks = ({ mobile = false }) => (
     <>
       {navLinks.map((link) => (
@@ -40,10 +45,10 @@ const Header = () => {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4">
           <div className="flex h-16 items-center justify-between">
-            <Link to="/" className="flex items-center gap-2">
+            <div onClick={handleLogoClick} className="flex items-center gap-2 cursor-pointer">
               <Building2 className="h-6 w-6 text-primary" />
               <span className="text-xl font-bold text-primary">Prime Properties</span>
-            </Link>
+            </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
