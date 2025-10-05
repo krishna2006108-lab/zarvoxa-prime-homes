@@ -8,60 +8,61 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Luxury Real Estate Theme - Deep Royal Blue & Gold */
-    --background: 0 0% 100%;
-    --foreground: 222 60% 15%;
+    /* Luxury Real Estate Theme - #006989 Primary & #EAEBED Background */
+    --background: 220 14% 93%;
+    --foreground: 195 100% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 60% 15%;
+    --card-foreground: 195 100% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 60% 15%;
+    --popover-foreground: 195 100% 15%;
 
-    /* Primary: Deep Royal Blue #1A2B6D */
-    --primary: 222 60% 26%;
+    /* Primary: #006989 */
+    --primary: 195 100% 27%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 222 55% 35%;
-    --primary-dark: 222 65% 18%;
+    --primary-light: 195 100% 35%;
+    --primary-dark: 195 100% 20%;
+    --primary-glow: 195 100% 40%;
 
     /* Secondary/Accent: Gold #D4AF37 */
     --secondary: 45 62% 53%;
-    --secondary-foreground: 222 60% 15%;
+    --secondary-foreground: 195 100% 15%;
     --gold: 45 62% 53%;
     --gold-light: 45 65% 65%;
     --gold-dark: 45 60% 45%;
 
-    --muted: 0 0% 98%;
-    --muted-foreground: 222 15% 45%;
+    --muted: 220 14% 93%;
+    --muted-foreground: 195 30% 45%;
 
     --accent: 45 62% 53%;
-    --accent-foreground: 222 60% 15%;
+    --accent-foreground: 195 100% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 222 20% 90%;
-    --input: 222 20% 90%;
-    --ring: 222 60% 26%;
+    --border: 220 10% 85%;
+    --input: 220 10% 85%;
+    --ring: 195 100% 27%;
 
     --radius: 0.75rem;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(222 60% 26%), hsl(222 65% 18%));
+    --gradient-primary: linear-gradient(135deg, hsl(195 100% 27%), hsl(195 100% 20%));
     --gradient-gold: linear-gradient(135deg, hsl(45 62% 53%), hsl(45 60% 45%));
-    --gradient-hero: linear-gradient(135deg, hsl(222 60% 26% / 0.95), hsl(222 65% 18% / 0.95));
+    --gradient-hero: linear-gradient(135deg, hsl(195 100% 27% / 0.95), hsl(195 100% 20% / 0.95));
 
     /* Shadows */
-    --shadow-sm: 0 2px 8px hsl(222 60% 26% / 0.08);
-    --shadow-md: 0 4px 16px hsl(222 60% 26% / 0.12);
-    --shadow-lg: 0 8px 32px hsl(222 60% 26% / 0.16);
+    --shadow-sm: 0 2px 8px hsl(195 100% 27% / 0.08);
+    --shadow-md: 0 4px 16px hsl(195 100% 27% / 0.12);
+    --shadow-lg: 0 8px 32px hsl(195 100% 27% / 0.16);
     --shadow-gold: 0 4px 20px hsl(45 62% 53% / 0.25);
 
     /* Transitions */
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     
     /* Glow effect for chatbot */
-    --shadow-glow: 0 0 30px hsl(222 60% 26% / 0.5);
+    --shadow-glow: 0 0 30px hsl(195 100% 27% / 0.5);
 
     --sidebar-background: 0 0% 98%;
 
@@ -81,23 +82,23 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222 55% 8%;
+    --background: 195 40% 10%;
     --foreground: 0 0% 98%;
 
-    --card: 222 50% 12%;
+    --card: 195 35% 12%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 222 50% 12%;
+    --popover: 195 35% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 222 60% 26%;
+    --primary: 195 100% 27%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 45 62% 53%;
-    --secondary-foreground: 222 60% 15%;
+    --secondary-foreground: 195 100% 15%;
 
-    --muted: 222 45% 15%;
-    --muted-foreground: 222 15% 65%;
+    --muted: 195 30% 15%;
+    --muted-foreground: 195 15% 65%;
 
     --accent: 45 62% 53%;
     --accent-foreground: 0 0% 100%;
@@ -105,8 +106,8 @@ All colors MUST be HSL.
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 222 40% 20%;
-    --input: 222 40% 20%;
+    --border: 195 30% 20%;
+    --input: 195 30% 20%;
     --ring: 45 62% 53%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;

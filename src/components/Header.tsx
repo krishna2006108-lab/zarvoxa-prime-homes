@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Building2 } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Menu, Building2, LogOut, User } from "lucide-react";
+import { useLocation, useNavigate } from "react-router-dom";
 import ListPropertyModal from "./ListPropertyModal";
+import { useAuth } from "@/contexts/AuthContext";
 
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+  const { user, signOut } = useAuth();
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -63,6 +66,34 @@ const Header = () => {
                 List Your Property
               </Button>
 
+              {user ? (
+                <div className="hidden md:flex items-center gap-2">
+                  <Button
+                    variant="outline"
+                    onClick={() => navigate('/dashboard')}
+                    className="gap-2"
+                  >
+                    <User className="h-4 w-4" />
+                    Dashboard
+                  </Button>
+                  <Button
+                    variant="outline"
+                    onClick={signOut}
+                    className="gap-2"
+                  >
+                    <LogOut className="h-4 w-4" />
+                    Logout
+                  </Button>
+                </div>
+              ) : (
+                <Button
+                  className="hidden md:flex bg-primary hover:bg-primary-dark text-primary-foreground"
+                  onClick={() => navigate('/auth')}
+                >
+                  Login / Sign Up
+                </Button>
+              )}
+
               {/* Mobile Menu */}
               <Sheet>
                 <SheetTrigger asChild className="md:hidden">
@@ -79,6 +110,34 @@ const Header = () => {
                     >
                       List Your Property
                     </Button>
+                    
+                    {user ? (
+                      <>
+                        <Button
+                          variant="outline"
+                          onClick={() => navigate('/dashboard')}
+                          className="gap-2"
+                        >
+                          <User className="h-4 w-4" />
+                          Dashboard
+                        </Button>
+                        <Button
+                          variant="outline"
+                          onClick={signOut}
+                          className="gap-2"
+                        >
+                          <LogOut className="h-4 w-4" />
+                          Logout
+                        </Button>
+                      </>
+                    ) : (
+                      <Button
+                        className="bg-primary hover:bg-primary-dark text-primary-foreground"
+                        onClick={() => navigate('/auth')}
+                      >
+                        Login / Sign Up
+                      </Button>
+                    )}
                   </nav>
                 </SheetContent>
               </Sheet>
